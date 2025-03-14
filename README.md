@@ -1,6 +1,8 @@
 # LeetCode
 
-Steps to build and run programs:
+Leetcode attempts in Java, and Go language.
+
+Steps to build and run Java programs:
 
 1) Use an IDE and import the project as maven project.
 2) Maven will build project automatically and download dependencies from maven's central repository.
