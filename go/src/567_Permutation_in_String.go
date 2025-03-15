@@ -36,3 +36,25 @@ func checkInclusion(s1 string, s2 string) bool {
 	}
 	return false
 }
+
+func checkInclusion2(s1 string, s2 string) bool {
+	var s1counts [26]int
+	var s2counts [26]int
+	s1len := len(s1)
+
+	for _, val := range s1 {
+		s1counts[val-'a'] += 1
+	}
+
+	for i, val := range s2 {
+		s2counts[val-'a'] += 1
+		if i >= s1len-1 {
+			if s1counts == s2counts {
+				return true
+			}
+			indexToRemove := s2[i-s1len+1]
+			s2counts[indexToRemove-'a'] -= 1
+		}
+	}
+	return false
+}
